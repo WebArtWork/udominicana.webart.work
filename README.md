@@ -22,3 +22,6 @@ Live site: https://udominicana.webart.work
 
 ## Notes
 The page notes that room categories, amenities, pricing, and cancellation terms depend on dates and the booking service's current offer, and that prices, availability, ratings, and conditions should be verified before travel.
+
+## Forms
+Live HotelOS form (`kp-udominicana`, script before `</body>`): `stay-request`.

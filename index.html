@@ -45,6 +45,8 @@
     .arch,.room{overflow:hidden}.arch img,.room img{transition:transform 1.1s cubic-bezier(.16,.8,.3,1)}.arch:hover img,.room:hover img{transform:scale(1.045)}
     @supports(background-attachment:fixed){@media(min-width:1001px) and (prefers-reduced-motion:no-preference){.restaurant,.location,.final{background-attachment:fixed}}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.reveal-item{opacity:1;transform:none;transition:none}.btn{transition:none}.hero-media{transform:none!important}.arch img,.room img,.gallery img{transition:none}}
+    .stay-req{background:var(--wine2);color:white}.stay-req .eyebrow{color:#e8c58f}.stay-req .lead{color:#dacbc8}.hf-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}.hf-phone{display:inline-block;margin-top:26px;font:500 1.6rem var(--serif);color:#e8c58f}.hf-phone:hover{text-decoration:underline}.hf-form{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px;padding:45px;background:var(--paper);color:var(--ink);min-width:0}.hf-field{display:grid;gap:7px;align-content:start;min-width:0;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.hf-field.full{grid-column:1/-1}.hf-field small{font-weight:500;letter-spacing:0;text-transform:none;color:var(--muted)}.hf-field input,.hf-field select,.hf-field textarea{width:100%;min-width:0;min-height:50px;padding:12px 15px;border:1px solid var(--line);border-radius:0;background:white;color:var(--ink);font:500 1rem var(--sans);letter-spacing:0;text-transform:none}.hf-field textarea{min-height:110px;resize:vertical}.hf-field input:focus,.hf-field select:focus,.hf-field textarea:focus{outline:2px solid var(--gold);outline-offset:1px}.hf-field [aria-invalid=true]{border-color:var(--wine);box-shadow:inset 0 0 0 1px var(--wine)}[data-error-for]{font-weight:600;letter-spacing:0;text-transform:none;color:var(--wine)}[data-error-for]:empty{display:none}.hf-trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.hf-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:18px}.hf-foot .btn{cursor:pointer;font-family:var(--sans)}.hf-foot .btn[disabled]{opacity:.6;cursor:wait;transform:none}.hf-note{flex:1;min-width:200px;margin:0;color:var(--muted);font-size:.75rem}[data-status]{grid-column:1/-1;margin:0;padding:16px 18px;border-left:3px solid var(--gold);background:var(--cream);font-size:.9rem}[data-status]:empty{display:none}[data-status][data-state=error]{border-color:var(--wine)}[data-status] a{color:var(--wine);font-weight:700;text-decoration:underline}
+    @media(max-width:900px){.hf-grid{grid-template-columns:1fr;gap:40px}}@media(max-width:620px){.hf-form{grid-template-columns:1fr;padding:28px 18px}}
     @media(max-width:900px){.links,.phone{display:none}.hero{min-height:720px}.hero-inner{grid-template-columns:1fr;gap:35px}.hero-side{display:none}.facts{grid-template-columns:repeat(2,1fr)}.fact:last-child{grid-column:span 2}.rating-row,.about-grid,.pet-grid,.contact-grid,.weekend-grid{grid-template-columns:1fr}.rooms-grid{grid-template-columns:1fr 1fr}.rooms-grid .room:first-child{grid-column:span 2}.comfort-grid{grid-template-columns:1fr 1fr}.comfort:nth-child(3n){border-right:1px solid var(--line)}.comfort:nth-child(2n){border-right:0}.comfort:nth-child(4){border-bottom:1px solid var(--line)}.drive-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery figure:first-child{grid-row:auto;grid-column:span 2}.foot{grid-template-columns:1fr 1fr}}
     @media(max-width:620px){.wrap{width:min(100% - 28px,1180px)}.section{padding:78px 0}.nav{height:76px}.hero{min-height:700px}.hero-inner{padding:140px 0 70px}.hero h1{font-size:3.65rem}.hero h2{font-size:1.3rem}.facts{margin-top:0}.fact{padding:20px 15px}.rating-row{gap:20px}.rating-row .btn{width:100%}.arch{height:430px}.rooms-head{display:block}.rooms-grid{grid-template-columns:1fr}.rooms-grid .room:first-child{grid-column:auto}.comfort-grid{grid-template-columns:1fr}.comfort,.comfort:nth-child(3n),.comfort:nth-child(2n),.comfort:nth-child(4){border-right:0;border-bottom:1px solid var(--line)}.comfort:last-child{border-bottom:0}.restaurant{min-height:610px}.pet-art{height:360px}.location-card{padding:35px 25px}.times{grid-template-columns:1fr}.time+.time{border-left:1px solid var(--line);border-top:0}.gallery{grid-template-columns:1fr;grid-template-rows:auto}.gallery figure,.gallery figure:first-child{grid-column:auto;height:230px}.gallery figure:first-child{height:330px}.contact-panel{padding:35px 25px}.mapbox{height:430px;padding:30px}.foot{grid-template-columns:1fr 1fr}.foot-brand{grid-column:span 2}.mobile-cta{position:fixed;z-index:50;bottom:0;left:0;right:0;display:grid;grid-template-columns:1fr 1fr;background:white;padding:8px;box-shadow:0 -8px 25px #0002}.mobile-cta .btn{min-height:44px;padding:0 8px;font-size:.66rem}.mobile-cta .btn:first-child{background:white;color:var(--wine)}body{padding-bottom:60px}}
   </style>
@@ -52,7 +54,7 @@
 </head>
 <body id="top">
   <a class="skip" href="#main">До основного вмісту</a>
-  <header><div class="wrap nav"><a class="logo" href="#top"><b>У ДОМІНІКАНА</b><small>Готель · Кам’янець-Подільський</small></a><nav class="links" id="nav-links" aria-label="Основна навігація"><a href="#about">Про готель</a><a href="#rooms">Номери</a><a href="#restaurant">Ресторан</a><a href="#comfort">Зручності</a><a href="#contacts">Контакти</a></nav><a class="phone" href="tel:+380678621345">+380 67 862 13 45</a></div></header>
+  <header><div class="wrap nav"><a class="logo" href="#top"><b>У ДОМІНІКАНА</b><small>Готель · Кам’янець-Подільський</small></a><nav class="links" id="nav-links" aria-label="Основна навігація"><a href="#about">Про готель</a><a href="#rooms">Номери</a><a href="#restaurant">Ресторан</a><a href="#comfort">Зручності</a><a href="#stay-request">Запит</a><a href="#contacts">Контакти</a></nav><a class="phone" href="tel:+380678621345">+380 67 862 13 45</a></div></header>
   <main id="main">
     <section class="hero"><div class="hero-media"><video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="https://cf.bstatic.com/xdata/images/hotel/max1024x768/471764131.jpg?k=2a1c1df319a1f414db72ac08446beaa689dcfda5466db8d258586c6a3bd3facd&o="><source src="hero-bg.mp4" type="video/mp4"></video></div><div class="wrap hero-inner"><div><p class="eyebrow">10 номерів · Кам’янець-Подільський</p><h1>У Домінікана</h1><h2>Зупиніться ближче до атмосфери Кам’янця</h2><p>Камерний готель із рестораном, паркінгом, Wi‑Fi та комфортом для подорожей удвох, сім’єю або з домашнім улюбленцем.</p><div class="actions"><a class="btn paper" href="#rooms">Обрати номер</a><a class="btn light" href="tel:+380678621345">Зателефонувати</a></div></div><div class="hero-side"><strong>Домініканська, 2А</strong><span>Кам’янець-Подільський<br>Хмельницька область</span><br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=У+Домінікана,+Домініканська+2А,+Кам’янець-Подільський" target="_blank" rel="noopener">Показати на карті →</a></div></div></section>
     <div class="wrap facts" aria-label="Основні переваги"><div class="fact"><b>10</b><span>номерів</span></div><div class="fact"><b>4.6 ★</b><span>рейтинг Google</span></div><div class="fact"><b>Ресторан</b><span>у готелі</span></div><div class="fact"><b>Можна з тваринами</b><span>pet friendly</span></div><div class="fact"><b>Зарядка для авто</b><span>EV charging</span></div></div>
@@ -66,8 +68,9 @@
     <section class="location"><div class="wrap"><div class="location-card reveal"><p class="eyebrow">Атмосфера старого міста</p><h2 class="title">Починайте прогулянку з Домініканської</h2><p>Готель розташований на вул. Домініканській, 2А. Це адреса для подорожі, у якій головною програмою стає сам Кам’янець.</p><a class="btn paper" href="https://www.google.com/maps/search/?api=1&query=У+Домінікана,+Домініканська+2А,+Кам’янець-Подільський" target="_blank" rel="noopener">Відкрити карту</a></div></div></section>
     <section class="section"><div class="wrap weekend-grid"><div class="reveal"><p class="eyebrow">Простий вікенд</p><h2 class="title">Ваш weekend у Кам’янці</h2><p class="lead">Проста подорож іноді запам’ятовується найбільше.</p><div class="times"><div class="time"><span>Заїзд</span><strong>14:00</strong></div><div class="time"><span>Виїзд</span><strong>11:00</strong></div></div><p class="snapshot">Підтвердьте час у вашому підтвердженні бронювання.</p></div><div class="days"><div class="day"><b>День 01</b><p>Приїхати, залишити авто, заселитися, вийти досліджувати місто й повернутися на вечерю.</p></div><div class="day"><b>День 02</b><p>Неспішний ранок, кава, новий маршрут Кам’янцем і дорога додому.</p></div></div></div></section>
     <section class="section rooms" id="gallery"><div class="wrap"><p class="eyebrow">Кілька деталей</p><h2 class="title">Кілька кадрів настрою</h2><div class="gallery reveal-group"><figure class="reveal-item"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/471764131.jpg?k=2a1c1df319a1f414db72ac08446beaa689dcfda5466db8d258586c6a3bd3facd&o=" alt="У Домінікана ввечері" loading="lazy"></figure><figure class="reveal-item"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/529311093.jpg?k=fd9e8ec70122f992f1f06cc7bd790863e82d2622ac03c43f7ff273771d8b8d4e&o=" alt="Вхід до готелю" loading="lazy"></figure><figure class="reveal-item"><img src="room-interior.jpg" alt="Деталі інтер’єру" loading="lazy"></figure><figure class="reveal-item"><img src="old-street.jpg" alt="Вечірня вулиця старого міста" loading="lazy"></figure><figure class="reveal-item"><img src="old-town.jpg" alt="Кам’янець-Подільська фортеця" loading="lazy"></figure></div></div></section>
+    <section class="section stay-req" id="stay-request"><div class="wrap hf-grid"><div class="reveal"><p class="eyebrow">Запит на проживання</p><h2 class="title">Залиште номер, ми передзвонимо</h2><p class="lead">Вкажіть телефон і, за бажанням, дати поїздки. Адміністратор зателефонує, щоб підтвердити вільні номери, вартість і умови для вашого улюбленця.</p><a class="hf-phone" href="tel:+380678621345">+380 67 862 13 45</a></div><form class="hf-form" data-hotelos data-form-name="Запит на проживання" novalidate><label class="hf-field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="stay-request-phone-error"><span id="stay-request-phone-error" data-error-for="phone"></span></label><label class="hf-field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="hf-field">Гостей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="hf-field">Дата заїзду<input name="checkIn" type="date"></label><label class="hf-field">Дата виїзду<input name="checkOut" type="date" aria-describedby="stay-request-checkout-error"><span id="stay-request-checkout-error" data-error-for="checkOut"></span></label><label class="hf-field full">Тип номера<select name="roomType"><option value="">Ще не вирішили</option><option>Номер з балконом</option><option>Двомісний номер</option><option>Junior Suite</option></select></label><label class="hf-field full">Побажання<textarea name="message" maxlength="5000" placeholder="Подорож із домашнім улюбленцем, зарядка авто, пізній заїзд…"></textarea></label><label class="hf-trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="hf-foot"><button class="btn" type="submit">Надіслати запит</button><p class="hf-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
     <section class="section contact" id="contacts"><div class="wrap contact-grid"><div class="mapbox"><iframe src="https://www.google.com/maps?q=У+Домінікана,+Домініканська+2А,+Кам’янець-Подільський&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта: У Домінікана, Домініканська 2А"></iframe><div><strong>Домініканська</strong><p>Стара адреса для нових вражень.</p><a class="btn paper" href="https://www.google.com/maps/search/?api=1&query=У+Домінікана,+Домініканська+2А,+Кам’янець-Подільський" target="_blank" rel="noopener">Прокласти маршрут</a></div></div><div class="contact-panel"><p class="eyebrow">Контакти</p><h2 class="title">У Домінікана</h2><address>вул. Домініканська, 2А<br>Кам’янець-Подільський<br>Хмельницька область, Україна</address><div class="contact-list"><a href="tel:+380678621345"><span>Телефон</span><b>+380 67 862 13 45</b></a><div><span>Заїзд</span><b>з 14:00</b></div><div><span>Виїзд</span><b>до 11:00</b></div></div><div class="actions"><a class="btn" href="tel:+380678621345">Зателефонувати</a><a class="btn" style="background:transparent;color:var(--wine)" href="https://www.booking.com/hotel/ua/u-dominicana.html" target="_blank" rel="noopener">Бронювання</a></div></div></div></section>
-    <section class="final reveal"><div class="wrap"><h2 class="title">Ваші кілька днів у Кам’янці починаються тут</h2><p>10 номерів, ресторан, безкоштовний паркінг, Wi‑Fi та комфорт для подорожей разом із домашнім улюбленцем.</p><div class="actions"><a class="btn paper" href="https://www.booking.com/hotel/ua/u-dominicana.html" target="_blank" rel="noopener">Забронювати номер</a><a class="btn light" href="tel:+380678621345">+380 67 862 13 45</a></div></div></section>
+    <section class="final reveal"><div class="wrap"><h2 class="title">Ваші кілька днів у Кам’янці починаються тут</h2><p>10 номерів, ресторан, безкоштовний паркінг, Wi‑Fi та комфорт для подорожей разом із домашнім улюбленцем.</p><div class="actions"><a class="btn paper" href="https://www.booking.com/hotel/ua/u-dominicana.html" target="_blank" rel="noopener">Забронювати номер</a><a class="btn light" href="#stay-request">Залишити запит</a><a class="btn light" href="tel:+380678621345">+380 67 862 13 45</a></div></div></section>
   </main>
   <footer><div class="wrap"><div class="foot"><div class="foot-brand"><a class="logo" href="#top"><b>У ДОМІНІКАНА</b><small>Готель · Кам’янець-Подільський</small></a><p>Камерний готель<br>для вашого Кам’янця.</p></div><div><h4>Готель</h4><a href="#about">Про нас</a><a href="#rooms">Номери</a><a href="#gallery">Галерея</a></div><div><h4>Проживання</h4><a href="#restaurant">Ресторан</a><a href="#comfort">Паркінг</a><a href="#comfort">Можна з тваринами</a><a href="#comfort">Зарядка для авто</a></div><div><h4>Інформація</h4><a href="#contacts">Check-in / out</a><a href="#contacts">Контакти</a><a href="https://www.google.com/maps/search/?api=1&query=У+Домінікана,+Домініканська+2А,+Кам’янець-Подільський" target="_blank" rel="noopener">Карта</a></div></div><div class="copyright">© У Домінікана · Актуальність цін, доступності, рейтингу та умов перевіряйте перед поїздкою.</div></div></footer>
   <div class="mobile-cta"><a class="btn" href="tel:+380678621345">Зателефонувати</a><a class="btn" href="https://www.booking.com/hotel/ua/u-dominicana.html" target="_blank" rel="noopener">Забронювати</a></div>
@@ -85,4 +88,151 @@
       }
     }
   </script>
+<script type="module">
+// HotelOS site forms. Paste this whole block into the site's index.html as an inline module
+// script right before the closing body tag, and set the three constants below. Never put a
+// literal closing script tag inside this file: it would end the inline script early.
+// Contract (hotelos.webart.work/CRM.md → Submission data contract, firestore.rules):
+// - every form is <form data-hotelos data-form-name="…" novalidate> inside a <section id="{formId}">;
+//   the section id IS the formId (stable slug, e.g. stay-request, sauna-request) and the CRM
+//   links to SITE + '#' + formId, so the link scrolls to the start of that section;
+// - fields are matched by name: phone (required), name, email, message, checkIn, checkOut, guests,
+//   roomType, date, time, service; a [data-genders] box renders one select per guest (hostels);
+// - errors go to [data-error-for="<name>"], the result to [data-status]; `website` is a honeypot.
+const HOTEL_ID = 'kp-udominicana'; // Firestore hotels/{id}: 'kp-' + site folder name
+const SITE = 'https://udominicana.webart.work/'; // from the site's CNAME
+const PHONE = '+380 67 862 13 45'; // shown when sending fails
+
+const FIREBASE = {
+	apiKey: 'AIzaSyBeSB5EuC4BBSpmCGA3Pjk7dD_JV2SdcSQ',
+	authDomain: 'hotel-upwork.firebaseapp.com',
+	projectId: 'hotel-upwork',
+	appId: '1:40129364672:web:c9659550ebf0f1d8a36325',
+};
+const SDK = 'https://www.gstatic.com/firebasejs/12.19.0/';
+const TEXT_FIELDS = ['name', 'email', 'message', 'checkIn', 'checkOut', 'date', 'time', 'roomType', 'service'];
+const today = new Date(Date.now() - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+
+let db;
+async function firestore() {
+	if (db) return db;
+	// Loaded on first submit only, so the page itself stays light.
+	const [{ initializeApp }, lite] = await Promise.all([import(SDK + 'firebase-app.js'), import(SDK + 'firebase-firestore-lite.js')]);
+	db = { lite, store: lite.getFirestore(initializeApp(FIREBASE)) };
+	return db;
+}
+
+function setup(form) {
+	const formId = form.closest('section[id]')?.id;
+	if (!formId) return console.error('HotelOS form needs a parent <section id="formId">', form);
+	const field = (name) => form.elements.namedItem(name);
+	const statusEl = form.querySelector('[data-status]');
+	const submit = form.querySelector('[type=submit]');
+	const submitLabel = submit.textContent;
+	const gendersBox = form.querySelector('[data-genders]');
+
+	for (const name of ['checkIn', 'checkOut', 'date']) if (field(name)) field(name).min = today;
+	if (field('checkIn') && field('checkOut')) {
+		field('checkIn').addEventListener('change', () => {
+			const checkIn = field('checkIn').value;
+			field('checkOut').min = checkIn || today;
+			if (field('checkOut').value && field('checkOut').value <= checkIn) field('checkOut').value = '';
+		});
+	}
+
+	// Hostels: one gender select per guest, kept in sync with the guests count.
+	function renderGenders() {
+		if (!gendersBox) return;
+		const count = Math.min(Math.max(parseInt(field('guests')?.value, 10) || 1, 1), 20);
+		const current = [...gendersBox.querySelectorAll('select')].map((select) => select.value);
+		gendersBox.replaceChildren(
+			...Array.from({ length: count }, (_, i) => {
+				const label = document.createElement('label');
+				label.textContent = `Гість ${i + 1}`;
+				const select = document.createElement('select');
+				select.name = 'gender';
+				select.required = true;
+				select.innerHTML = '<option value="">Стать</option><option value="female">Жінка</option><option value="male">Чоловік</option>';
+				select.value = current[i] ?? '';
+				label.append(select);
+				return label;
+			}),
+		);
+	}
+	if (gendersBox) {
+		field('guests')?.addEventListener('input', renderGenders);
+		renderGenders();
+	}
+
+	function setError(name, text) {
+		const input = field(name);
+		if (input instanceof Element) input.setAttribute('aria-invalid', text ? 'true' : 'false');
+		const slot = form.querySelector(`[data-error-for="${name}"]`);
+		if (slot) slot.textContent = text;
+	}
+
+	function showStatus(state, html) {
+		statusEl.dataset.state = state;
+		statusEl.innerHTML = html;
+	}
+
+	form.addEventListener('submit', async (event) => {
+		event.preventDefault();
+		showStatus('', '');
+		const phone = field('phone').value.trim();
+		const digits = phone.replace(/\D/g, '');
+		setError('phone', digits.length < 9 || digits.length > 15 ? 'Вкажіть номер телефону, щоб ми могли передзвонити.' : '');
+		if (field('checkIn') && field('checkOut')) {
+			const { value: checkIn } = field('checkIn');
+			const { value: checkOut } = field('checkOut');
+			setError('checkOut', checkIn && checkOut && checkOut <= checkIn ? 'Дата виїзду має бути пізніше за дату заїзду.' : '');
+		}
+		const genderSelects = gendersBox ? [...gendersBox.querySelectorAll('select')] : [];
+		if (gendersBox) {
+			const missing = genderSelects.some((select) => !select.value);
+			for (const select of genderSelects) select.setAttribute('aria-invalid', missing && !select.value ? 'true' : 'false');
+			const slot = form.querySelector('[data-error-for="genders"]');
+			if (slot) slot.textContent = missing ? 'Вкажіть стать кожного гостя, щоб ми підібрали місця.' : '';
+		}
+		const invalid = form.querySelector('[aria-invalid=true]');
+		if (invalid) return invalid.focus();
+
+		const thanks = `Дякуємо! Ми зателефонуємо на ${phone.replace(/</g, '')} найближчим часом.`;
+		// Bots fill the hidden field: pretend success, send nothing.
+		if (field('website')?.value) {
+			form.reset();
+			renderGenders();
+			return showStatus('ok', thanks);
+		}
+
+		const lead = { phone, formId, formName: form.dataset.formName, site: SITE, hotelId: HOTEL_ID };
+		for (const name of TEXT_FIELDS) {
+			const value = field(name)?.value?.trim();
+			if (value) lead[name] = value;
+		}
+		const guests = parseInt(field('guests')?.value, 10);
+		if (guests >= 1 && guests <= 50) lead.guests = guests;
+		if (genderSelects.length) lead.genders = genderSelects.map((select) => select.value);
+
+		submit.disabled = true;
+		submit.textContent = 'Надсилаємо…';
+		try {
+			const { lite, store } = await firestore();
+			await lite.addDoc(lite.collection(store, 'submissions'), { ...lead, status: 'new', history: [], createdAt: lite.serverTimestamp() });
+			form.reset();
+			if (field('checkOut')) field('checkOut').min = today;
+			renderGenders();
+			showStatus('ok', thanks);
+		} catch (error) {
+			console.error(error);
+			showStatus('error', `Не вдалося надіслати запит. Зателефонуйте нам: <a href="tel:${PHONE.replace(/[^\d+]/g, '')}">${PHONE}</a>.`);
+		} finally {
+			submit.disabled = false;
+			submit.textContent = submitLabel;
+		}
+	});
+}
+
+document.querySelectorAll('form[data-hotelos]').forEach(setup);
+</script>
 </body></html>
